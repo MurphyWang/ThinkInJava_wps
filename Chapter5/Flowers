@@ -1,0 +1,41 @@
+package com.wps.thinkinjava.chapter5;
+
+public class Flowers {
+
+	int petalcount = 0;
+	String name = null;
+	
+	
+	Flowers() {
+		this("shuixian", 253);
+		System.out.println("no args");
+	}
+
+	Flowers(int petals) {
+		petalcount = petals;
+		System.out.println("only petals");
+	}
+
+	Flowers(String name, int petals) {
+		this(petals);
+		this.name = name;
+		System.out.println("petals and name");
+		
+	}
+
+	Flowers(String name) {
+		System.out.println("string only "+ name);
+	}
+	void printPetalsCount(){
+		System.out.println("name: "+ name +"; petals: "+ petalcount);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//new Flowers().printPetalsCount();
+		Flowers shuixianFlowers = new Flowers("test", 123313);
+		shuixianFlowers.printPetalsCount();
+	}
+
+}
